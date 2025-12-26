@@ -1,16 +1,24 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:layout="using:AvaDemo.Views.Controls.Layout"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:shadui="using:ShadUI"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="AvaDemo.GridSplitterPage"
-             x:DataType="layout:GridSplitterPageModel">
-  <Grid ColumnDefinitions="*, auto">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:layout="using:AvaDemo.Views.Controls.Layout"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:shadui="using:ShadUI"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="AvaDemo.GridSplitterPage"
+			 x:DataType="layout:GridSplitterPageModel">
+	<Grid ColumnDefinitions="*, auto">
 		<ScrollViewer>
 			<StackPanel Spacing="10" Margin="20">
-				
+				<shadui:Card HasShadow="True" Padding="20" HorizontalAlignment="Stretch" BorderBrush="{DynamicResource InfoColor20}" Background="{DynamicResource InfoColor10}">
+					<TextBlock TextWrapping="Wrap" FontSize="14" Text="Resize grid columns or rows, you can also set a minimum or maximum width/height limit." />
+				</shadui:Card>
+
+				<Grid ColumnDefinitions="*, 4, *" Height="200">
+					<Rectangle Grid.Column="0" Fill="Blue"/>
+					<GridSplitter Grid.Column="1" Background="Black" ResizeDirection="Columns"/>
+					<Rectangle Grid.Column="2" Fill="Red"/>
+				</Grid>
 			</StackPanel>
 		</ScrollViewer>
 		<shadui:Sidebar

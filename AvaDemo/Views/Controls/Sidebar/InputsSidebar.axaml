@@ -10,14 +10,14 @@
 			 x:DataType="sidebar:InputsSidebarModel">
 	<StackPanel Spacing="4">
 		<shadui:SidebarItemLabel AsSeparator="True" Text="Text" />
-		<shadui:SidebarItem Content="Text Box">
+		<shadui:SidebarItem Content="Text Box" Command="{Binding OpenTextBoxCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="FormTextbox" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Masked Text Box">
+		<shadui:SidebarItem Content="Masked Text Box" Command="{Binding OpenMaskedTextBoxCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="FormTextboxPassword" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
@@ -26,21 +26,21 @@
 		</shadui:SidebarItem>
 
 		<shadui:SidebarItemLabel AsSeparator="True" Text="List" />
-		<shadui:SidebarItem Content="List Box">
+		<shadui:SidebarItem Content="List Box" Command="{Binding OpenListBoxCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="ListBox" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Combo Box">
+		<shadui:SidebarItem Content="Combo Box" Command="{Binding OpenComboBoxCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="FilterVariant" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Auto Complete Box">
+		<shadui:SidebarItem Content="Auto Complete Box" Command="{Binding OpenAutoCompleteBoxCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="TextSearchVariant" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
@@ -49,28 +49,28 @@
 		</shadui:SidebarItem>
 
 		<shadui:SidebarItemLabel AsSeparator="True" Text="Value" />
-		<shadui:SidebarItem Content="Check Box">
+		<shadui:SidebarItem Content="Check Box" Command="{Binding OpenCheckBoxCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="CheckboxMarked" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Slider">
+		<shadui:SidebarItem Content="Slider" Command="{Binding OpenSliderCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="Slider" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Date Picker">
+		<shadui:SidebarItem Content="Date Picker" Command="{Binding OpenDatePickerCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="Number1Box" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Time Picker">
+		<shadui:SidebarItem Content="Time Picker" Command="{Binding OpenTimePickerCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="ClockTimeThree" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
@@ -79,21 +79,21 @@
 		</shadui:SidebarItem>
 
 		<shadui:SidebarItemLabel AsSeparator="True" Text="Menus" />
-		<shadui:SidebarItem Content="Calendar">
+		<shadui:SidebarItem Content="Calendar" Command="{Binding OpenCalendarCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="CalendarMonth" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Calendar Date Picker">
+		<shadui:SidebarItem Content="Calendar Date Picker" Command="{Binding OpenCalendarDatePickerCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="CalendarText" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Color Picker">
+		<shadui:SidebarItem Content="Color Picker" Command="{Binding OpenColorPickerCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="Palette" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />

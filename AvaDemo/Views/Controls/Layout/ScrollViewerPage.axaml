@@ -10,7 +10,11 @@
  <Grid ColumnDefinitions="*, auto">
 		<ScrollViewer>
 			<StackPanel Spacing="10" Margin="20">
-				
+				<shadui:Card HasShadow="True" Padding="20" HorizontalAlignment="Stretch" BorderBrush="{DynamicResource InfoColor20}" Background="{DynamicResource InfoColor10}">
+					<TextBlock TextWrapping="Wrap" FontSize="14" Text="Allows for scrolling horizontally or vertically based on the child controls" />
+				</shadui:Card>
+
+				<Panel Background="gray" Height="1000"></Panel>
 			</StackPanel>
 		</ScrollViewer>
 		<shadui:Sidebar

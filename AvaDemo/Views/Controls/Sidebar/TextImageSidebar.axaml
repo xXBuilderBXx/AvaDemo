@@ -10,14 +10,14 @@
 			 x:DataType="sidebar:TextImageSidebarModel">
 	<StackPanel Spacing="4">
 		<shadui:SidebarItemLabel AsSeparator="True" Text="Text" />
-		<shadui:SidebarItem Content="Text Block">
+		<shadui:SidebarItem Content="Text Block" Command="{Binding OpenTextBlockCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="FormatText" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Select Text Block">
+		<shadui:SidebarItem Content="Select Text Block" Command="{Binding OpenSelectTextBlockCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="CursorText" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
@@ -26,14 +26,14 @@
 		</shadui:SidebarItem>
 
 		<shadui:SidebarItemLabel AsSeparator="True" Text="Images" />
-		<shadui:SidebarItem Content="Image">
+		<shadui:SidebarItem Content="Image" Command="{Binding OpenImageCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="ImageArea" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Path Icon">
+		<shadui:SidebarItem Content="Path Icon" Command="{Binding Path=}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="ImageFilterVintage" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />

@@ -10,49 +10,49 @@
 			 x:DataType="sidebar:ButtonsSidebarModel">
   <StackPanel Spacing="4">
       <shadui:SidebarItemLabel AsSeparator="True" Text="Buttons" />
-		<shadui:SidebarItem Content="Button">
+		<shadui:SidebarItem Content="Button" Command="{Binding OpenButtonCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="ButtonCursor" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Repeat Button">
+		<shadui:SidebarItem Content="Repeat Button" Command="{Binding OpenRepeatButtonCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="GestureTapButton" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Radio Button">
+		<shadui:SidebarItem Content="Radio Button" Command="{Binding OpenRadioButtonCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="RadioboxMarked" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Toggle Button">
+		<shadui:SidebarItem Content="Toggle Button" Command="{Binding OpenToggleButtonCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="Card" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Spinner Button">
+		<shadui:SidebarItem Content="Spinner Button" Command="{Binding OpenSpinnerButtonCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="UnfoldMoreHorizontal" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Split Button">
+		<shadui:SidebarItem Content="Split Button" Command="{Binding OpenSplitButtonCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="DotsVertical" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Toggle Split Button">
+		<shadui:SidebarItem Content="Toggle Split Button" Command="{Binding OpenToggleSplitButtonCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="DotsVerticalCircle" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
@@ -61,21 +61,21 @@
 		</shadui:SidebarItem>
 
 	  <shadui:SidebarItemLabel AsSeparator="True" Text="Popups" />
-		<shadui:SidebarItem Content="Menu">
+		<shadui:SidebarItem Content="Menu" Command="{Binding OpenMenuCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="Menu" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Flyout">
+		<shadui:SidebarItem Content="Flyout" Command="{Binding OpenFlyoutCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="Tooltip" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Tooltip">
+		<shadui:SidebarItem Content="Tooltip" Command="{Binding OpenTooltipCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="TooltipText" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />

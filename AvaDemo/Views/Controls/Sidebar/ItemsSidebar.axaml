@@ -10,7 +10,7 @@
 			 x:DataType="sidebar:ItemsSidebarModel">
   <StackPanel Spacing="4">
 	  <shadui:SidebarItemLabel AsSeparator="True" Text="Data" />
-      <shadui:SidebarItem>
+      <shadui:SidebarItem Command="{Binding OpenDataGridCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="ViewList" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
@@ -25,14 +25,14 @@
 				</Grid>
 			</shadui:SidebarItem.Content>
 		</shadui:SidebarItem>
-	  <shadui:SidebarItem Content="Items Control">
+	  <shadui:SidebarItem Content="Items Control" Command="{Binding OpenItemsControlCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="FormatListNumbered" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-	  <shadui:SidebarItem>
+	  <shadui:SidebarItem Command="{Binding OpenItemsRepeaterCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="FormatListText" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />

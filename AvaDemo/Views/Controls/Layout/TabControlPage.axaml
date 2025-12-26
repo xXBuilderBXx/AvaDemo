@@ -1,16 +1,30 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:layout="using:AvaDemo.Views.Controls.Layout"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:shadui="using:ShadUI"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="AvaDemo.TabControlPage"
-             x:DataType="layout:TabControlPageModel">
-  <Grid ColumnDefinitions="*, auto">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:layout="using:AvaDemo.Views.Controls.Layout"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:shadui="using:ShadUI"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="AvaDemo.TabControlPage"
+			 x:DataType="layout:TabControlPageModel">
+	<Grid ColumnDefinitions="*, auto">
 		<ScrollViewer>
 			<StackPanel Spacing="10" Margin="20">
-				
+				<shadui:Card HasShadow="True" Padding="20" HorizontalAlignment="Stretch" BorderBrush="{DynamicResource InfoColor20}" Background="{DynamicResource InfoColor10}">
+					<TextBlock TextWrapping="Wrap" FontSize="14" Text="Create multi page controls that can be selected." />
+				</shadui:Card>
+
+				<TabControl Margin="5" Padding="10">
+					<TabItem Header="Tab 1">
+						<TextBlock Margin="5">Hi :)</TextBlock>
+					</TabItem>
+					<TabItem Header="Tab 2">
+						<TextBlock Margin="5">This is a tab!</TextBlock>
+					</TabItem>
+					<TabItem Header="Tab 3">
+						<TextBlock Margin="5">#Avalonia</TextBlock>
+					</TabItem>
+				</TabControl>
 			</StackPanel>
 		</ScrollViewer>
 		<shadui:Sidebar
