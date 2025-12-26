@@ -1,0 +1,104 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:materialIcons="using:Material.Icons.Avalonia"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:shadui="using:ShadUI"
+             xmlns:sidebar="using:AvaDemo.Views.Controls.Sidebar"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="AvaDemo.InputsSidebar"
+			 x:DataType="sidebar:InputsSidebarModel">
+	<StackPanel Spacing="4">
+		<shadui:SidebarItemLabel AsSeparator="True" Text="Text" />
+		<shadui:SidebarItem Content="Text Box">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="FormTextbox" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Masked Text Box">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="FormTextboxPassword" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+
+		<shadui:SidebarItemLabel AsSeparator="True" Text="List" />
+		<shadui:SidebarItem Content="List Box">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ListBox" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Combo Box">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="FilterVariant" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Auto Complete Box">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="TextSearchVariant" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+
+		<shadui:SidebarItemLabel AsSeparator="True" Text="Value" />
+		<shadui:SidebarItem Content="Check Box">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="CheckboxMarked" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Slider">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Slider" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Date Picker">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Number1Box" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Time Picker">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ClockTimeThree" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+
+		<shadui:SidebarItemLabel AsSeparator="True" Text="Menus" />
+		<shadui:SidebarItem Content="Calendar">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="CalendarMonth" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Calendar Date Picker">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="CalendarText" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Color Picker">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Palette" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+	</StackPanel>
+</UserControl>

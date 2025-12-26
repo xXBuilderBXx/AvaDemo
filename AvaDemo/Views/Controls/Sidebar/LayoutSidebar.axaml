@@ -1,0 +1,164 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:materialIcons="using:Material.Icons.Avalonia"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:shadui="using:ShadUI"
+             xmlns:sidebar="using:AvaDemo.Views.Controls.Sidebar"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="AvaDemo.LayoutSidebar"
+			 x:DataType="sidebar:LayoutSidebarModel">
+	<StackPanel Spacing="4">
+		<shadui:SidebarItemLabel AsSeparator="True" Text="Container" />
+		<shadui:SidebarItem Content="Border" Command="{Binding OpenBorder}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="BorderAllVariant" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Canvas" Command="{Binding OpenCanvasCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Artboard" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Dock Panel" Command="{Binding OpenDockerPanelCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="DockTop" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		
+		<shadui:SidebarItem Content="Grid" Command="{Binding OpenGridCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="GridLarge" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+
+		<shadui:SidebarItem Content="Uniform Grid" Command="{Binding OpenUniformGridCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ViewWeek" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		
+		<shadui:SidebarItem Content="Panel" Command="{Binding OpenPanelCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Square" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Relative Panel" Command="{Binding OpenRelativePanelCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ViewCompact" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+
+		<shadui:SidebarItem Content="Stack Panel" Command="{Binding OpenStackPanelCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ViewSequential" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Wrap Panel" Command="{Binding OpenWrapPanelCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Wrap" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		
+		<shadui:SidebarItem Command="{Binding OpenFlexBoxCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ViewArray" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+			<shadui:SidebarItem.Content>
+				<Grid Grid.ColumnDefinitions="*, auto">
+					<TextBlock VerticalAlignment="Center" Text="Flex Box"></TextBlock>
+					<Border Grid.Column="1" VerticalAlignment="Center" CornerRadius="8" ClipToBounds="True">
+						<TextBlock Padding="10,2,10,2" Background="{DynamicResource InfoColor60}" FontWeight="Bold" Text="Labs"></TextBlock>
+					</Border>
+				</Grid>
+			</shadui:SidebarItem.Content>
+		</shadui:SidebarItem>
+
+		<shadui:SidebarItemLabel AsSeparator="True" Text="Controls" />
+		<shadui:SidebarItem Content="Expander" Command="{Binding OpenExpanderCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ChevronDown" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Grid Splitter" Command="{Binding OpenGridSplitterCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ArrowSplitVertical" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Scroll Viewer" Command="{Binding OpenScrollViewerCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="MouseScrollWheel" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Split View" Command="{Binding OpenSplitViewCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ViewSplitVertical" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Tab Control" Command="{Binding OpenTabControlCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Tab" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Command="{Binding OpenFlipViewCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ViewCarousel" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+			<shadui:SidebarItem.Content>
+				<Grid Grid.ColumnDefinitions="*, auto">
+					<TextBlock VerticalAlignment="Center" Text="Flip View"></TextBlock>
+					<Border Grid.Column="1" VerticalAlignment="Center" CornerRadius="8" ClipToBounds="True">
+						<TextBlock Padding="10,2,10,2" Background="{DynamicResource InfoColor60}" FontWeight="Bold" Text="Labs"></TextBlock>
+					</Border>
+				</Grid>
+			</shadui:SidebarItem.Content>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Command="{Binding OpenInfoBadgeCommand}">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="BellBadge" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+			<shadui:SidebarItem.Content>
+				<Grid Grid.ColumnDefinitions="*, auto">
+					<TextBlock VerticalAlignment="Center" Text="Info Badge"></TextBlock>
+					<Border Grid.Column="1" VerticalAlignment="Center" CornerRadius="8" ClipToBounds="True">
+						<TextBlock Padding="10,2,10,2" Background="{DynamicResource InfoColor60}" FontWeight="Bold" Text="Labs"></TextBlock>
+					</Border>
+				</Grid>
+			</shadui:SidebarItem.Content>
+		</shadui:SidebarItem>
+	</StackPanel>
+</UserControl>

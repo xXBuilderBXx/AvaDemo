@@ -1,0 +1,43 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:layout="using:AvaDemo.Views.Controls.Layout"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:shadui="using:ShadUI"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="AvaDemo.GridPage"
+			 x:DataType="layout:GridPageModel">
+	<Grid ColumnDefinitions="*, auto">
+		<ScrollViewer>
+			<StackPanel Spacing="10" Margin="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+				<shadui:Card HasShadow="True" Padding="20" HorizontalAlignment="Stretch" BorderBrush="{DynamicResource InfoColor20}" Background="{DynamicResource InfoColor10}">
+					<TextBlock TextWrapping="Wrap" FontSize="14" Text="Layout controls with columns and rows that have specific width and height." />
+				</shadui:Card>
+
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="200"></ColumnDefinition>
+						<ColumnDefinition Width="*"></ColumnDefinition>
+						<ColumnDefinition Width="2*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<Panel Height="200" Background="red"></Panel>
+					<Panel VerticalAlignment="Top" Height="100" Grid.Column="1" Background="blue"></Panel>
+					<Panel VerticalAlignment="Top" Height="120" Grid.Column="2" Background="green"></Panel>
+				</Grid>
+			</StackPanel>
+		</ScrollViewer>
+		<shadui:Sidebar
+		Grid.Column="1"
+		Width="255"
+		Background="{DynamicResource CardBackgroundColor}"
+		BorderThickness="1,0,0,0"
+		ItemIconContentSpacing="12">
+			<StackPanel Spacing="20" Margin="20, 10" HorizontalAlignment="Stretch">
+				<StackPanel Spacing="10">
+					<shadui:SidebarItemLabel AsSeparator="True" Text="Properties" />
+					<Label>Background</Label>
+				</StackPanel>
+			</StackPanel>
+		</shadui:Sidebar>
+	</Grid>
+</UserControl>

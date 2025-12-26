@@ -1,0 +1,86 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialIcons="using:Material.Icons.Avalonia"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:shadui="using:ShadUI"
+             xmlns:sidebar="using:AvaDemo.Views.Controls.Sidebar"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaDemo.ButtonsSidebar"
+			 x:DataType="sidebar:ButtonsSidebarModel">
+  <StackPanel Spacing="4">
+      <shadui:SidebarItemLabel AsSeparator="True" Text="Buttons" />
+		<shadui:SidebarItem Content="Button">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ButtonCursor" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Repeat Button">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="GestureTapButton" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Radio Button">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="RadioboxMarked" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Toggle Button">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Card" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Spinner Button">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="UnfoldMoreHorizontal" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Split Button">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="DotsVertical" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Toggle Split Button">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="DotsVerticalCircle" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+
+	  <shadui:SidebarItemLabel AsSeparator="True" Text="Popups" />
+		<shadui:SidebarItem Content="Menu">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Menu" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Flyout">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Tooltip" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Tooltip">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="TooltipText" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+  </StackPanel>
+</UserControl>

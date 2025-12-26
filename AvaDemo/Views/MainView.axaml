@@ -1,16 +1,36 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:AvaDemo.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="AvaDemo.Views.MainView"
-             x:DataType="vm:MainViewModel">
-  <Design.DataContext>
-    <!-- This only sets the DataContext for the previewer in an IDE,
-         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-    <vm:MainViewModel />
-  </Design.DataContext>
-
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:shadui="using:ShadUI"
+			 xmlns:vm="clr-namespace:AvaDemo.ViewModels"
+			 xmlns:materialIcons="using:Material.Icons.Avalonia"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="AvaDemo.Views.MainView"
+			 Background="{DynamicResource PrimaryForegroundColor}"
+			 x:DataType="vm:MainViewModel">
+	<Grid ColumnDefinitions="Auto *">
+		<shadui:Sidebar
+		Grid.Column="0"
+		Width="255"
+		MinWidth="56"
+		Padding="8"
+		Background="{DynamicResource CardBackgroundColor}"
+		BorderThickness="0,0,1,0"
+		ItemIconContentSpacing="12">
+			<shadui:Sidebar.Header>
+				<ComboBox Width="225" SelectedIndex="{Binding SelectedComboIndex}">
+					<ComboBoxItem>Layout</ComboBoxItem>
+					<ComboBoxItem Content="{Binding ComboTitleText}"></ComboBoxItem>
+					<ComboBoxItem>Buttons</ComboBoxItem>
+					<ComboBoxItem>Inputs</ComboBoxItem>
+					<ComboBoxItem Content="{Binding ComboTitleData}"></ComboBoxItem>
+				</ComboBox>
+			</shadui:Sidebar.Header>
+			<StackPanel Spacing="4">
+				<UserControl Content="{Binding Sidebar}"></UserControl>
+			</StackPanel>
+		</shadui:Sidebar>
+		<ContentControl Grid.Column="1" Content="{Binding Page}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></ContentControl>
+	</Grid>
 </UserControl>

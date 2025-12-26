@@ -1,0 +1,104 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:materialIcons="using:Material.Icons.Avalonia"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:shadui="using:ShadUI"
+             xmlns:sidebar="using:AvaDemo.Views.Controls.Sidebar"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="AvaDemo.TextImageSidebar"
+			 x:DataType="sidebar:TextImageSidebarModel">
+	<StackPanel Spacing="4">
+		<shadui:SidebarItemLabel AsSeparator="True" Text="Text" />
+		<shadui:SidebarItem Content="Text Block">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="FormatText" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Select Text Block">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="CursorText" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+
+		<shadui:SidebarItemLabel AsSeparator="True" Text="Images" />
+		<shadui:SidebarItem Content="Image">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ImageArea" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem Content="Path Icon">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ImageFilterVintage" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem>
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ImageRefresh" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+			<shadui:SidebarItem.Content>
+				<Grid Grid.ColumnDefinitions="*, auto">
+					<TextBlock VerticalAlignment="Center" Text="Async Image"></TextBlock>
+					<Border Grid.Column="1" VerticalAlignment="Center" CornerRadius="8" ClipToBounds="True">
+						<TextBlock Padding="10,2,10,2" Background="{DynamicResource InfoColor60}" FontWeight="Bold" Text="Labs"></TextBlock>
+					</Border>
+				</Grid>
+			</shadui:SidebarItem.Content>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem>
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="FileGifBox" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+			<shadui:SidebarItem.Content>
+				<Grid Grid.ColumnDefinitions="*, auto">
+					<TextBlock VerticalAlignment="Center" Text="Gif Viewer"></TextBlock>
+					<Border Grid.Column="1" VerticalAlignment="Center" CornerRadius="8" ClipToBounds="True">
+						<TextBlock Padding="10,2,10,2" Background="{DynamicResource InfoColor60}" FontWeight="Bold" Text="Labs"></TextBlock>
+					</Border>
+				</Grid>
+			</shadui:SidebarItem.Content>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem>
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="Qrcode" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+			<shadui:SidebarItem.Content>
+				<Grid Grid.ColumnDefinitions="*, auto">
+					<TextBlock VerticalAlignment="Center" Text="QR Code"></TextBlock>
+					<Border Grid.Column="1" VerticalAlignment="Center" CornerRadius="8" ClipToBounds="True">
+						<TextBlock Padding="10,2,10,2" Background="{DynamicResource InfoColor60}" FontWeight="Bold" Text="Labs"></TextBlock>
+					</Border>
+				</Grid>
+			</shadui:SidebarItem.Content>
+		</shadui:SidebarItem>
+		<shadui:SidebarItem>
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="StickerEmoji" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+			<shadui:SidebarItem.Content>
+				<Grid Grid.ColumnDefinitions="*, auto">
+					<TextBlock VerticalAlignment="Center" Text="Lottie"></TextBlock>
+					<Border Grid.Column="1" VerticalAlignment="Center" CornerRadius="8" ClipToBounds="True">
+						<TextBlock Padding="10,2,10,2" Background="{DynamicResource InfoColor60}" FontWeight="Bold" Text="Labs"></TextBlock>
+					</Border>
+				</Grid>
+			</shadui:SidebarItem.Content>
+		</shadui:SidebarItem>
+	</StackPanel>
+</UserControl>

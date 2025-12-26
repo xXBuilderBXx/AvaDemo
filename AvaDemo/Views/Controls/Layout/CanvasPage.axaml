@@ -1,0 +1,45 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:layout="using:AvaDemo.Views.Controls.Layout"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:shadui="using:ShadUI"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="AvaDemo.CanvasPage"
+			 x:DataType="layout:CanvasPageModel">
+	<Grid ColumnDefinitions="*, auto">
+		<ScrollViewer>
+			<StackPanel Spacing="10" Margin="20">
+				<shadui:Card HasShadow="True" Padding="20" HorizontalAlignment="Stretch" BorderBrush="{DynamicResource InfoColor20}" Background="{DynamicResource InfoColor10}">
+					<TextBlock TextWrapping="Wrap" FontSize="14" Text="Manually align the content based on the top and side directions." />
+				</shadui:Card>
+
+				<shadui:Card HasShadow="True" Padding="20" HorizontalAlignment="Stretch" BorderBrush="{DynamicResource WarningColor20}" Background="{DynamicResource WarningColor10}">
+					<TextBlock TextWrapping="Wrap" FontSize="14" Text="Use with caution, this does not wrap or overflow based on the screen size!" />
+				</shadui:Card>
+
+				<Canvas Margin="20">
+					<Rectangle Fill="Red" Height="100" Width="100" Margin="10"/>
+					<Rectangle Fill="Blue" Height="100" Width="100" Opacity="0.5"
+							   Canvas.Left="50" Canvas.Top="20"/>
+					<Rectangle Fill="Green" Height="100" Width="100"
+							   Canvas.Left="60" Margin="40" Canvas.Top="40"/>
+					
+				</Canvas>
+			</StackPanel>
+		</ScrollViewer>
+		<shadui:Sidebar
+		Grid.Column="1"
+		Width="255"
+		Background="{DynamicResource CardBackgroundColor}"
+		BorderThickness="1,0,0,0"
+		ItemIconContentSpacing="12">
+			<StackPanel Spacing="20" Margin="20, 10" HorizontalAlignment="Stretch">
+				<StackPanel Spacing="10">
+					<shadui:SidebarItemLabel AsSeparator="True" Text="Properties" />
+					<Label>Background</Label>
+				</StackPanel>
+			</StackPanel>
+		</shadui:Sidebar>
+	</Grid>
+</UserControl>

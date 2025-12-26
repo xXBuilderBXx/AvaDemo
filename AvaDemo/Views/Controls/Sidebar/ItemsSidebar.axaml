@@ -1,0 +1,52 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialIcons="using:Material.Icons.Avalonia"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:shadui="using:ShadUI"
+             xmlns:sidebar="using:AvaDemo.Views.Controls.Sidebar"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaDemo.ItemsSidebar"
+			 x:DataType="sidebar:ItemsSidebarModel">
+  <StackPanel Spacing="4">
+	  <shadui:SidebarItemLabel AsSeparator="True" Text="Data" />
+      <shadui:SidebarItem>
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="ViewList" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+			<shadui:SidebarItem.Content>
+				<Grid Grid.ColumnDefinitions="*, auto">
+					<TextBlock Text="Data Grid" VerticalAlignment="Center"></TextBlock>
+					<Border Grid.Column="1" VerticalAlignment="Center" CornerRadius="8" ClipToBounds="True">
+						<TextBlock Padding="10,2,10,2" Background="{DynamicResource InfoColor60}" FontWeight="Bold" Text="Package"></TextBlock>
+					</Border>
+				</Grid>
+			</shadui:SidebarItem.Content>
+		</shadui:SidebarItem>
+	  <shadui:SidebarItem Content="Items Control">
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="FormatListNumbered" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+		</shadui:SidebarItem>
+	  <shadui:SidebarItem>
+			<shadui:SidebarItem.Icon>
+				<Viewbox>
+					<materialIcons:MaterialIcon Kind="FormatListText" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
+				</Viewbox>
+			</shadui:SidebarItem.Icon>
+			<shadui:SidebarItem.Content>
+				<Grid Grid.ColumnDefinitions="*, auto">
+					<TextBlock Text="Items Repeater" VerticalAlignment="Center"></TextBlock>
+					<Border Grid.Column="1" VerticalAlignment="Center" CornerRadius="8" ClipToBounds="True">
+						<TextBlock Padding="10,2,10,2" Background="{DynamicResource InfoColor60}" FontWeight="Bold" Text="Package"></TextBlock>
+					</Border>
+				</Grid>
+			</shadui:SidebarItem.Content>
+		</shadui:SidebarItem>
+
+  </StackPanel>
+</UserControl>

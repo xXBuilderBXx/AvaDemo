@@ -1,15 +1,18 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:AvaDemo"
+             xmlns:themes="using:ShadUI"
+            xmlns:materialIcons="using:Material.Icons.Avalonia"
              x:Class="AvaDemo.App"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.DataTemplates>
-        <local:ViewLocator/>
     </Application.DataTemplates>
 
     <Application.Styles>
+        <themes:ShadTheme />
+        <materialIcons:MaterialIconStyles />
         <FluentTheme />
     </Application.Styles>
 </Application>

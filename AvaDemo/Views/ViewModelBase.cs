@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace AvaDemo.ViewModels;
+namespace AvaDemo.Views;
 
 public abstract class ViewModelBase : ObservableObject
 {
