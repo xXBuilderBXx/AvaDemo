@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Project Path="AvaDemo.Browser/AvaDemo.Browser.csproj" />
+  <Project Path="AvaDemo.Desktop/AvaDemo.Desktop.csproj" />
+  <Project Path="AvaDemo/AvaDemo.csproj" />
+</Solution>
