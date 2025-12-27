@@ -5,5 +5,6 @@
   <Project Path="AvaDemo.Browser/AvaDemo.Browser.csproj" />
   <Project Path="AvaDemo.Desktop/AvaDemo.Desktop.csproj" />
   <Project Path="AvaDemo/AvaDemo.csproj" />
+  <Project Path="Avalonia.Controls.DataGrid/Avalonia.Controls.DataGrid.csproj" Id="8d495523-ecf2-4bab-a5bb-4cea4e2998cd" />
   <Project Path="ShadUI/ShadUI.csproj" Id="d94cfcce-83d0-4371-9659-85c60e3c1eff" />
 </Solution>

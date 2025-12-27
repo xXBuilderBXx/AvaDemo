@@ -9,7 +9,10 @@
 	<ItemGroup>
 		<PackageReference Include="Avalonia" />
 		<PackageReference Include="Avalonia.Controls.ColorPicker" />
-		<PackageReference Include="Avalonia.Controls.DataGrid" />
 		<PackageReference Include="Avalonia.Themes.Simple" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Avalonia.Controls.DataGrid\Avalonia.Controls.DataGrid.csproj" />
 	</ItemGroup>
 </Project>
