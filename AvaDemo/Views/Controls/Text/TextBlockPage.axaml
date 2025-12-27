@@ -1,12 +1,40 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:text="using:AvaDemo.Views.Controls.Text"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="AvaDemo.TextBlockPage"
-             x:DataType="text:TextBlockPageModel">
-  <StackPanel Spacing="10">
-	  
-  </StackPanel>
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:shadui="using:ShadUI"
+			 xmlns:text="using:AvaDemo.Views.Controls.Text"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="AvaDemo.TextBlockPage"
+			 x:DataType="text:TextBlockPageModel">
+	<Grid ColumnDefinitions="*, auto">
+		<ScrollViewer>
+			<StackPanel Spacing="10" Margin="20">
+				<shadui:Card HasShadow="True" Padding="20" HorizontalAlignment="Stretch" BorderBrush="{DynamicResource InfoColor20}" Background="{DynamicResource InfoColor10}">
+					<TextBlock TextWrapping="Wrap" FontSize="14" Text="Simple text boxes with font size, weight and styles!" />
+				</shadui:Card>
+
+				<TextBlock Margin="0 5" FontSize="18" FontWeight="Bold">Heading</TextBlock>
+				<TextBlock Margin="0 5" FontStyle="Italic" xml:space="preserve">This is  a single line.</TextBlock>
+				<TextBlock Margin="0 5" xml:space="preserve">This is a multi-line display
+				that has returns in it.
+				The text block respects the line breaks
+				as set out in XAML.</TextBlock>
+
+			</StackPanel>
+		</ScrollViewer>
+		<shadui:Sidebar
+		Grid.Column="1"
+		Width="255"
+		Background="{DynamicResource CardBackgroundColor}"
+		BorderThickness="1,0,0,0"
+		ItemIconContentSpacing="12">
+			<StackPanel Spacing="20" Margin="20, 10" HorizontalAlignment="Stretch">
+				<StackPanel Spacing="10">
+					<shadui:SidebarItemLabel AsSeparator="True" Text="Properties" />
+					<Label>Background</Label>
+				</StackPanel>
+			</StackPanel>
+		</shadui:Sidebar>
+	</Grid>
 </UserControl>

@@ -5,4 +5,5 @@
   <Project Path="AvaDemo.Browser/AvaDemo.Browser.csproj" />
   <Project Path="AvaDemo.Desktop/AvaDemo.Desktop.csproj" />
   <Project Path="AvaDemo/AvaDemo.csproj" />
+  <Project Path="ShadUI/ShadUI.csproj" Id="d94cfcce-83d0-4371-9659-85c60e3c1eff" />
 </Solution>

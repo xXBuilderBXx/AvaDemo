@@ -3,10 +3,33 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:inputs="using:AvaDemo.Views.Controls.Inputs"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:shadui="using:ShadUI"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaDemo.AutoCompleteBoxPage"
              x:DataType="inputs:AutoCompleteBoxPageModel">
-  <StackPanel Spacing="10">
-	  
-  </StackPanel>
+  <Grid ColumnDefinitions="*, auto">
+		<ScrollViewer>
+			<StackPanel Spacing="10" Margin="20">
+				<shadui:Card HasShadow="True" Padding="20" HorizontalAlignment="Stretch" BorderBrush="{DynamicResource InfoColor20}" Background="{DynamicResource InfoColor10}">
+					<TextBlock TextWrapping="Wrap" FontSize="14" Text="User input with a list of suggestions to use." />
+				</shadui:Card>
+
+				<Label>Animals</Label>
+				<AutoCompleteBox x:Name="animals" FilterMode="StartsWith" />
+			</StackPanel>
+		</ScrollViewer>
+		<shadui:Sidebar
+		Grid.Column="1"
+		Width="255"
+		Background="{DynamicResource CardBackgroundColor}"
+		BorderThickness="1,0,0,0"
+		ItemIconContentSpacing="12">
+			<StackPanel Spacing="20" Margin="20, 10" HorizontalAlignment="Stretch">
+				<StackPanel Spacing="10">
+					<shadui:SidebarItemLabel AsSeparator="True" Text="Properties" />
+					<Label>Background</Label>
+				</StackPanel>
+			</StackPanel>
+		</shadui:Sidebar>
+	</Grid>
 </UserControl>

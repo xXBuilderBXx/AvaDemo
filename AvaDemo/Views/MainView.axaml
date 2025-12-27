@@ -13,7 +13,6 @@
 		<shadui:Sidebar
 		Grid.Column="0"
 		Width="255"
-		MinWidth="56"
 		Padding="8"
 		Background="{DynamicResource CardBackgroundColor}"
 		BorderThickness="0,0,1,0"
@@ -27,9 +26,11 @@
 					<ComboBoxItem Content="{Binding ComboTitleData}"></ComboBoxItem>
 				</ComboBox>
 			</shadui:Sidebar.Header>
-			<StackPanel Spacing="4">
-				<UserControl Content="{Binding Sidebar}"></UserControl>
-			</StackPanel>
+			<ScrollViewer>
+				<StackPanel Margin="4, 10, 4, 10">
+					<UserControl Content="{Binding Sidebar}"></UserControl>
+				</StackPanel>
+			</ScrollViewer>
 		</shadui:Sidebar>
 		<ContentControl Grid.Column="1" Content="{Binding Page}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></ContentControl>
 	</Grid>

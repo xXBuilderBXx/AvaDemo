@@ -1,12 +1,47 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:buttons="using:AvaDemo.Views.Controls.Buttons"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="AvaDemo.MenuPage"
-             x:DataType="buttons:MenuPageModel">
-  <StackPanel Spacing="10">
-	  
-  </StackPanel>
+			 xmlns:buttons="using:AvaDemo.Views.Controls.Buttons"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:shadui="using:ShadUI"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="AvaDemo.MenuPage"
+			 x:DataType="buttons:MenuPageModel">
+	<Grid ColumnDefinitions="*, auto">
+		<ScrollViewer>
+			<StackPanel Spacing="10" Margin="20">
+				<shadui:Card HasShadow="True" Padding="20" HorizontalAlignment="Stretch" BorderBrush="{DynamicResource InfoColor20}" Background="{DynamicResource InfoColor10}">
+					<TextBlock TextWrapping="Wrap" FontSize="14" Text="Buttons with a popup menu!" />
+				</shadui:Card>
+
+				<DockPanel>
+					<Menu DockPanel.Dock="Top">
+						<MenuItem Header="_File">
+							<MenuItem Header="_Open..."/>
+							<Separator/>
+							<MenuItem Header="_Exit"/>
+						</MenuItem>
+						<MenuItem Header="_Edit">
+							<MenuItem Header="Copy"/>
+							<MenuItem Header="Paste"/>
+						</MenuItem>
+					</Menu>
+					<TextBlock/>
+				</DockPanel>
+			</StackPanel>
+		</ScrollViewer>
+		<shadui:Sidebar
+		Grid.Column="1"
+		Width="255"
+		Background="{DynamicResource CardBackgroundColor}"
+		BorderThickness="1,0,0,0"
+		ItemIconContentSpacing="12">
+			<StackPanel Spacing="20" Margin="20, 10" HorizontalAlignment="Stretch">
+				<StackPanel Spacing="10">
+					<shadui:SidebarItemLabel AsSeparator="True" Text="Properties" />
+					<Label>Background</Label>
+				</StackPanel>
+			</StackPanel>
+		</shadui:Sidebar>
+	</Grid>
 </UserControl>

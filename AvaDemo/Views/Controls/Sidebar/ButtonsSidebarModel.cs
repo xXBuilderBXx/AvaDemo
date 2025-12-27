@@ -33,7 +33,7 @@ public partial class ButtonsSidebarModel(MainViewModel view) : ViewModelBase
     [RelayCommand]
     public void OpenSpinnerButton()
     {
-        view.Page = new SpinnerButtonPage { DataContext = new SpinnerButtonPage() };
+        view.Page = new SpinnerButtonPage { DataContext = new SpinnerButtonPageModel() };
     }
 
     [RelayCommand]

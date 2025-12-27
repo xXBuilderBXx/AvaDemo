@@ -33,7 +33,7 @@
 				</Viewbox>
 			</shadui:SidebarItem.Icon>
 		</shadui:SidebarItem>
-		<shadui:SidebarItem Content="Path Icon" Command="{Binding Path=}">
+		<shadui:SidebarItem Content="Path Icon" Command="{Binding OpenPathIconCommand}">
 			<shadui:SidebarItem.Icon>
 				<Viewbox>
 					<materialIcons:MaterialIcon Kind="ImageFilterVintage" Width="16" Height="16" Foreground="{DynamicResource PrimaryColor}" />
